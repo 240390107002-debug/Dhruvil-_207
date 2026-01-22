@@ -1,0 +1,45 @@
+public class Point {
+    private double x;
+    private double y;
+
+    // Default constructor: initializes x and y to 5
+    public Point() {
+        this.x = 5;
+        this.y = 5;
+    }
+
+    // Parameterized constructor: initializes x and y with user-supplied values
+    public Point(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    // Copy constructor: creates a new Point as a copy of an existing Point
+    public Point(Point other) {
+        this.x = other.x;
+        this.y = other.y;
+    }
+
+    // Display method: shows the point's coordinates
+    public void display() {
+        System.out.println("Point: (" + x + ", " + y + ")");
+    }
+
+    // Main method to test all constructors and display functionality
+    public static void main(String[] args) {
+        // Test default constructor
+        Point p1 = new Point();
+        System.out.print("Default constructor: ");
+        p1.display();
+
+        // Test parameterized constructor
+        Point p2 = new Point(3.5, 7.2);
+        System.out.print("Parameterized constructor: ");
+        p2.display();
+
+        // Test copy constructor
+        Point p3 = new Point(p2);
+        System.out.print("Copy constructor: ");
+        p3.display();
+    }
+}
